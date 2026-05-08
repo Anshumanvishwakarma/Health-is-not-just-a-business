@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Vandana Medical</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ann-bar"><div class="ann-track"><span>✦ Free delivery on orders above ₹999</span><span>📍 Lakhimpur Kheri, UP</span><span>📞 +91 98765 43210</span><span>✉️ hello@vandanamedical.com</span><span>✦ Free delivery on orders above ₹999</span><span>📍 Lakhimpur Kheri, UP</span><span>📞 +91 98765 43210</span><span>✉️ hello@vandanamedical.com</span></div></div>
+
+<nav class="navbar" id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-mark">VM</div><div class="logo-text"><div class="brand">Vandana</div><div class="sub">Medical</div></div></a>
+    <div class="nav-links">
+      <a href="index.html"   class="nav-link">Home</a>
+      <a href="shop.html"    class="nav-link">Shop</a>
+      <a href="about.html"   class="nav-link">About</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-icon" onclick="window.location='shop.html'">♡</button>
+      <button class="nav-icon" onclick="openCart()">🛒<span class="nav-badge cart-badge-count">0</span></button>
+      <a href="login.html" class="btn-primary desktop"><span>Sign In</span></a>
+      <button class="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+  <a href="index.html">Home</a><a href="shop.html">Shop</a>
+  <a href="about.html">About</a><a href="contact.html">Contact</a>
+</div>
+
+<section class="section" style="padding-top:8rem">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:5.6rem">
+      <div class="section-eye">Get In Touch</div>
+      <div class="section-title">We're here to <em>help</em></div>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-card" data-reveal>
+          <div class="ci-ico" style="background:rgba(20,83,45,.08)">📍</div>
+          <div><div class="ci-title">Visit Us</div><div class="ci-text">Main Market Oel , Near Sarkari Hospital,<br>Lakhimpur Kheri Oel, UP — 262701<br><span style="color:var(--green-mid);font-weight:600">Owner: Anmol Agnihotri</span></div></div>
+        </div>
+        <div class="contact-info-card" data-reveal>
+          <div class="ci-ico" style="background:rgba(59,130,246,.08)">📞</div>
+          <div><div class="ci-title">Call Us</div><div class="ci-text">+91 8299716762</div></div>
+        </div>
+        <div class="contact-info-card" data-reveal>
+          <div class="ci-ico" style="background:rgba(124,58,237,.08)">✉️</div>
+          <div><div class="ci-title">Email Us</div><div class="ci-text">vandanamedicalagencya@gmail.com</div></div>
+        </div>
+        <div class="contact-info-card" data-reveal>
+          <div class="ci-ico" style="background:rgba(201,168,76,.1)">🕐</div>
+          <div><div class="ci-title">Working Hours</div><div class="ci-text">Mon–Sat: 9 AM – 8 PM<br>AI Support: 24/7 Available</div></div>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <div id="contact-form-wrap">
+          <h2>Send a Message</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.6rem">
+            <div class="form-field"><label class="form-label">First Name</label><input class="form-input" type="text" placeholder="Anmol"></div>
+            <div class="form-field"><label class="form-label">Last Name</label><input class="form-input" type="text" placeholder="Agnihotri"></div>
+          </div>
+          <div class="form-field"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="you@example.com"></div>
+          <div class="form-field"><label class="form-label">Subject</label><input class="form-input" type="text" placeholder="Order inquiry, product question..."></div>
+          <div class="form-field"><label class="form-label">Message</label><textarea class="form-textarea" rows="5" placeholder="How can we help you?"></textarea></div>
+          <button class="form-submit" onclick="submitContact()">✈ Send Message</button>
+        </div>
+        <div class="contact-success" id="contact-success">
+          <div class="success-ico">✅</div>
+          <h3 style="font-family:var(--font-display);font-size:2.4rem;margin-bottom:.8rem">Message Sent!</h3>
+          <p style="font-size:1.4rem;color:var(--text-2)">We'll get back to you within 24 hours.</p>
+          <button class="btn-outline" style="margin-top:2rem" onclick="resetContact()">Send another message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--navy);padding:3.2rem;text-align:center">
+  <p style="color:rgba(255,255,255,.4);font-size:1.2rem">© 2024 Vandana Medical · Owner: Anmol Agnihotri · Lakhimpur Kheri, UP</p>
+</footer>
+
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-head"><h2>🛒 Cart</h2><button class="cart-close" onclick="closeCart()">✕</button></div>
+  <div class="cart-body" id="cart-body"></div>
+  <div class="cart-foot" id="cart-foot" style="display:none"><div class="cart-total-row cart-total-grand" style="display:flex;justify-content:space-between"><span>Total</span><span id="cart-total">$0.00</span></div><button class="checkout-btn"><span>Checkout →</span></button></div>
+</div>
+
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

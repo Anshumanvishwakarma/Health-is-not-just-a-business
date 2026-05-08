@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — Vandana Medical</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ann-bar"><div class="ann-track"><span>✦ Free delivery on orders above ₹999</span><span>🛡 100% Authentic Products</span><span>⭐ 50,000+ Happy Customers</span><span>✨ Use code FIRST10 for 10% off</span><span>✦ Free delivery on orders above ₹999</span><span>🛡 100% Authentic Products</span><span>⭐ 50,000+ Happy Customers</span><span>✨ Use code FIRST10 for 10% off</span></div></div>
+
+<nav class="navbar" id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">VM</div>
+      <div class="logo-text"><div class="brand">Vandana</div><div class="sub">Medical</div></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html"   class="nav-link">Home</a>
+      <a href="shop.html"    class="nav-link active">Shop</a>
+      <a href="about.html"   class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-icon" title="Wishlist">♡</button>
+      <button class="nav-icon" onclick="openCart()">🛒<span class="nav-badge cart-badge-count">0</span></button>
+      <a href="login.html" class="btn-primary desktop"><span>Sign In</span></a>
+      <button class="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+  <a href="index.html">Home</a><a href="shop.html">Shop</a>
+  <a href="about.html">About</a><a href="contact.html">Contact</a>
+</div>
+
+<!-- Shop Hero & Controls -->
+<div class="shop-hero">
+  <div class="shop-controls">
+    <div class="section-eye" style="color:rgba(201,168,76,.8)">Our Products</div>
+    <div class="section-title" style="color:#fff">Health <span style="color:var(--gold-light);font-style:italic">Essentials</span></div>
+    <div class="shop-search-row">
+      <div class="search-wrap">
+        <span class="search-ico">🔍</span>
+        <input type="text" id="shop-search" placeholder="Search vitamins, minerals, devices..." oninput="renderShop()">
+      </div>
+      <select class="sort-select" id="shop-sort" onchange="renderShop()">
+        <option value="default">Featured</option>
+        <option value="price-asc">Price: Low → High</option>
+        <option value="price-desc">Price: High → Low</option>
+        <option value="rating">Top Rated</option>
+        <option value="reviews">Most Reviewed</option>
+      </select>
+      <div class="grid-toggle">
+        <button class="grid-btn active" id="grid-btn-4" onclick="setGrid(4)">⊞</button>
+        <button class="grid-btn" id="grid-btn-3" onclick="setGrid(3)">☰</button>
+      </div>
+    </div>
+    <div class="cat-filter-row">
+      <button class="cat-filter-tab active" data-cat="all"      onclick="setCat('all',this)">✦ All Products</button>
+      <button class="cat-filter-tab" data-cat="vitamins"        onclick="setCat('vitamins',this)">💊 Vitamins</button>
+      <button class="cat-filter-tab" data-cat="minerals"        onclick="setCat('minerals',this)">⚗️ Minerals</button>
+      <button class="cat-filter-tab" data-cat="devices"         onclick="setCat('devices',this)">🩺 Devices</button>
+      <button class="cat-filter-tab" data-cat="wellness"        onclick="setCat('wellness',this)">🌿 Wellness</button>
+    </div>
+  </div>
+</div>
+
+<section class="section" style="padding-top:3.2rem;background:#f5f2ea">
+  <div class="section-inner">
+    <div style="font-size:1.3rem;color:var(--text-3);margin-bottom:2rem" id="shop-result-count"></div>
+    <div class="products-grid" id="shop-grid"></div>
+  </div>
+</section>
+
+<footer style="background:var(--navy);padding:3.2rem;text-align:center">
+  <p style="color:rgba(255,255,255,.4);font-size:1.2rem">© 2024 Vandana Medical · Owner: Anmol Agnihotri · Lakhimpur Kheri, UP</p>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-head"><h2>🛒 Cart <span class="cart-cnt cart-badge-count">0</span></h2><button class="cart-close" onclick="closeCart()">✕</button></div>
+  <div class="cart-body" id="cart-body"></div>
+  <div class="cart-foot" id="cart-foot" style="display:none">
+    <div class="cart-coupon"><input class="coupon-input" type="text" placeholder="🏷 Coupon code (FIRST10)"><button class="coupon-btn">Apply</button></div>
+    <div class="cart-total-row"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+    <div class="cart-total-row cart-total-free"><span>Delivery</span><span>Free 🎉</span></div>
+    <div class="cart-total-row cart-total-grand" style="display:flex;justify-content:space-between"><span>Total</span><span id="cart-total">$0.00</span></div>
+    <button class="checkout-btn"><span>Proceed to Checkout →</span></button>
+    <button class="cart-clear-btn" onclick="clearCart()">Clear cart</button>
+  </div>
+</div>
+
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Read URL param for category
+  const urlCat = new URLSearchParams(window.location.search).get('cat');
+  if (urlCat) {
+    window._shopCat = urlCat;
+    document.querySelectorAll('.cat-filter-tab').forEach(t => {
+      t.classList.toggle('active', t.dataset.cat === urlCat);
+    });
+  }
+  document.addEventListener('DOMContentLoaded', renderShop);
+</script>
+</body>
+</html>

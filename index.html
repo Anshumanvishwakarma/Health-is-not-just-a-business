@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vandana Medical — Premium Health & Wellness</title>
+  <meta name="description" content="Pharmaceutical-grade vitamins, minerals, and medical devices. Owner: Anmol Agnihotri, Lakhimpur Kheri, UP.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="ann-bar">
+  <div class="ann-track">
+    <span>✦ Free delivery on orders above ₹999</span>
+    <span>🛡 100% Authentic Products</span>
+    <span>⭐ 50,000+ Happy Customers</span>
+    <span>🚀 Same Day Dispatch Available</span>
+    <span>💊 Pharmaceutical Grade Quality</span>
+    <span>🤖 AI Health Advisor 24/7</span>
+    <span>✨ Use code FIRST10 for 10% off</span>
+    <span>📍 Lakhimpur Kheri, UP</span>
+    <span>✦ Free delivery on orders above ₹999</span>
+    <span>🛡 100% Authentic Products</span>
+    <span>⭐ 50,000+ Happy Customers</span>
+    <span>🚀 Same Day Dispatch Available</span>
+    <span>💊 Pharmaceutical Grade Quality</span>
+    <span>🤖 AI Health Advisor 24/7</span>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">VM</div>
+      <div class="logo-text">
+        <div class="brand">Vandana</div>
+        <div class="sub">Medical</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html"   class="nav-link active" data-page="home">Home</a>
+      <a href="shop.html"    class="nav-link" data-page="shop">Shop</a>
+      <a href="about.html"   class="nav-link" data-page="about">About</a>
+      <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-icon" onclick="window.location='shop.html'" title="Wishlist">♡</button>
+      <button class="nav-icon" onclick="openCart()" title="Cart">
+        🛒<span class="nav-badge cart-badge-count">0</span>
+      </button>
+      <a href="login.html" class="btn-primary desktop"><span>Sign In</span></a>
+      <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="login.html">Sign In</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">✦ AI-Powered Health Platform <span class="hero-badge-dot"></span></div>
+      <h1>
+        Premium<br>
+        <span class="accent">Health</span><br>
+        <em>Redefined</em>
+      </h1>
+      <p class="hero-desc">Pharmaceutical-grade vitamins, minerals, and medical devices — with an AI health advisor available 24/7 to guide your wellness journey.</p>
+      <div class="hero-btns">
+        <a href="shop.html" class="btn-gold">Shop Now →</a>
+        <a href="about.html" class="btn-outline" style="color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.3)">Our Story</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><div class="trust-icon">🛡</div><span>100% Authentic</span></div>
+        <div class="trust-item"><div class="trust-icon">🚚</div><span>Free Delivery</span></div>
+        <div class="trust-item"><div class="trust-icon">⭐</div><span>4.9 / 5 Rating</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-3d-scene">
+        <div class="hero-card-3d">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&q=80" alt="Vitamin D3">
+          <div class="hero-card-overlay">
+            <div class="hero-card-name">Vitamin D3 + K2</div>
+            <div class="hero-card-tag">Bone & Immune Health</div>
+          </div>
+        </div>
+        <div class="float-card top-right">
+          <div class="float-label">Happy Customers</div>
+          <div class="float-val">50K+</div>
+        </div>
+        <div class="float-card bot-left">
+          <div class="float-ai">
+            <div class="float-ai-icon">🤖</div>
+            <div>
+              <div class="float-ai-sub">AI Advisor</div>
+              <div class="float-ai-main">Online 24/7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Bar -->
+<div class="features-bar">
+  <div class="features-grid">
+    <div class="feat-item">
+      <div class="feat-icon" style="background:rgba(20,83,45,.08)">🛡</div>
+      <div><div class="feat-title">Secure Payment</div><div class="feat-sub">All cards accepted</div></div>
+    </div>
+    <div class="feat-item">
+      <div class="feat-icon" style="background:rgba(59,130,246,.08)">🚚</div>
+      <div><div class="feat-title">Free Delivery</div><div class="feat-sub">On orders above ₹999</div></div>
+    </div>
+    <div class="feat-item">
+      <div class="feat-icon" style="background:rgba(239,68,68,.08)">❤️</div>
+      <div><div class="feat-title">Authentic Products</div><div class="feat-sub">Pharma certified</div></div>
+    </div>
+    <div class="feat-item">
+      <div class="feat-icon" style="background:rgba(201,168,76,.1)">🤖</div>
+      <div><div class="feat-title">24/7 AI Support</div><div class="feat-sub">Instant health advice</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AI CHATBOT — FRONT & CENTER ═══ -->
+<section class="chatbot-section">
+  <div class="chatbot-inner">
+    <div class="chatbot-header">
+      <div class="section-eye">Your Personal Health Advisor</div>
+      <h2>Chat with MedBot AI</h2>
+      <p>Ask about supplements, products, dosages, or any health question — powered by smart offline responses</p>
+    </div>
+    <div class="chatbot-window">
+      <div class="chatbot-topbar">
+        <div class="chatbot-ava">🤖</div>
+        <div>
+          <div class="chatbot-name">MedBot AI</div>
+          <div class="chatbot-status"><span class="chatbot-dot"></span>Online — Health Advisor</div>
+        </div>
+        <button onclick="clearChatMessages()" style="margin-left:auto;background:rgba(255,255,255,.1);border:none;color:rgba(255,255,255,.7);width:2.8rem;height:2.8rem;border-radius:.8rem;font-size:1.4rem;cursor:pointer">↺</button>
+      </div>
+      <div class="chatbot-msgs" id="chatbot-messages">
+        <div class="chat-msg">
+          <div class="chat-msg-ava bot">🤖</div>
+          <div class="chat-bubble bot">Hello! I'm <strong>MedBot</strong>, your AI health advisor at Vandana Medical.<br>I can help you find the right supplements, explain product benefits, or answer health questions.<br>How can I help you today? 💊</div>
+        </div>
+      </div>
+      <div class="chatbot-suggestions" id="chatbot-suggestions">
+        <button class="sug-btn" onclick="sendSuggestion(this)">Daily vitamins?</button>
+        <button class="sug-btn" onclick="sendSuggestion(this)">Best for sleep?</button>
+        <button class="sug-btn" onclick="sendSuggestion(this)">Immunity boost?</button>
+        <button class="sug-btn" onclick="sendSuggestion(this)">Best sellers?</button>
+        <button class="sug-btn" onclick="sendSuggestion(this)">Free delivery?</button>
+      </div>
+      <div class="chatbot-input-row">
+        <input class="chatbot-input" id="chatbot-input" type="text" placeholder="Ask about any health topic...">
+        <button class="chatbot-send" onclick="sendChatMessage()">↑</button>
+      </div>
+      <div class="chatbot-disclaimer">Smart offline AI · Not medical advice · Always consult a doctor for serious conditions</div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-eye">Browse By Category</div>
+    <div class="section-title">What are you looking for?</div>
+    <div class="cat-grid">
+      <a href="shop.html?cat=vitamins" class="cat-card" style="background:rgba(20,83,45,.06);border-color:rgba(20,83,45,.15);color:#15803d">
+        <div class="cat-emoji">💊</div><div class="cat-label">Vitamins</div>
+      </a>
+      <a href="shop.html?cat=minerals" class="cat-card" style="background:rgba(59,130,246,.06);border-color:rgba(59,130,246,.15);color:#1d4ed8">
+        <div class="cat-emoji">⚗️</div><div class="cat-label">Minerals</div>
+      </a>
+      <a href="shop.html?cat=devices" class="cat-card" style="background:rgba(124,58,237,.06);border-color:rgba(124,58,237,.15);color:#7c3aed">
+        <div class="cat-emoji">🩺</div><div class="cat-label">Devices</div>
+      </a>
+      <a href="shop.html?cat=wellness" class="cat-card" style="background:rgba(245,158,11,.06);border-color:rgba(245,158,11,.15);color:#b45309">
+        <div class="cat-emoji">🌿</div><div class="cat-label">Wellness</div>
+      </a>
+      <a href="shop.html?cat=vitamins" class="cat-card" style="background:rgba(239,68,68,.06);border-color:rgba(239,68,68,.15);color:#dc2626">
+        <div class="cat-emoji">🛡</div><div class="cat-label">Immunity</div>
+      </a>
+      <a href="shop.html?cat=wellness" class="cat-card" style="background:rgba(236,72,153,.06);border-color:rgba(236,72,153,.15);color:#be185d">
+        <div class="cat-emoji">👶</div><div class="cat-label">Baby Care</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section class="section" style="background:#fff;padding-top:6rem">
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <div class="section-eye">Hand-Picked For You</div>
+        <div class="section-title">Super Hot <em>Items!</em></div>
+      </div>
+      <a href="shop.html" class="view-all">View all products →</a>
+    </div>
+    <div class="products-grid" id="home-products-grid"></div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="section stats-section">
+  <div class="section-inner">
+    <div class="stats-grid">
+      <div class="stat-card" data-reveal>
+        <div class="stat-ico" style="background:rgba(34,197,94,.15)">👥</div>
+        <div class="stat-val">50K+</div><div class="stat-lbl">Happy Customers</div>
+      </div>
+      <div class="stat-card" data-reveal>
+        <div class="stat-ico" style="background:rgba(59,130,246,.15)">📦</div>
+        <div class="stat-val">200+</div><div class="stat-lbl">Products Available</div>
+      </div>
+      <div class="stat-card" data-reveal>
+        <div class="stat-ico" style="background:rgba(201,168,76,.15)">⭐</div>
+        <div class="stat-val">12+</div><div class="stat-lbl">Years of Trust</div>
+      </div>
+      <div class="stat-card" data-reveal>
+        <div class="stat-ico" style="background:rgba(124,58,237,.15)">👨‍⚕️</div>
+        <div class="stat-val">4.9/5</div><div class="stat-lbl">Average Rating</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Banner CTA -->
+<section class="section" style="background:var(--cream-dark)">
+  <div class="section-inner">
+    <div class="banner-cta">
+      <div class="banner-blob banner-blob-1"></div>
+      <div class="banner-blob banner-blob-2"></div>
+      <div class="banner-grid">
+        <div>
+          <div class="banner-tag">✦ First Order Offer</div>
+          <h2>Get 10% Off<br><em>Your First Order</em></h2>
+          <p>Use code <span class="banner-code">FIRST10</span> at checkout. Free delivery included on all first orders above ₹999.</p>
+          <a href="shop.html" class="banner-btn">Shop Now →</a>
+        </div>
+        <div class="banner-imgs">
+          <div class="banner-img-item"><img src="https://images.unsplash.com/photo-1618015357798-c9bfda425a0e?w=150&q=70" alt="omega3"></div>
+          <div class="banner-img-item"><img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=150&q=70" alt="oils"></div>
+          <div class="banner-img-item"><img src="https://images.unsplash.com/photo-1631563019676-dade0dbdb8b3?w=150&q=70" alt="bp"></div>
+          <div class="banner-img-item"><img src="https://images.unsplash.com/photo-1550572017-edd951b55104?w=150&q=70" alt="mag"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" style="background:#fff">
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <div class="section-eye">What People Say</div>
+        <div class="section-title">Trusted by <em>50,000+</em> customers</div>
+      </div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card" data-reveal>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"Vandana Medical delivers pharmaceutical-grade supplements. I recommend their D3+K2 to all my cardiac patients."</div>
+        <div class="testi-author"><div class="testi-ava">PS</div><div><div class="testi-name">Dr. Priya Sharma</div><div class="testi-role">Cardiologist, AIIMS Delhi</div></div></div>
+        <div class="testi-verify">✓ Verified: Vitamin D3 + K2</div>
+      </div>
+      <div class="testi-card" data-reveal>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"The AI health advisor helped me find the perfect supplement stack. Exceptional quality and fast delivery!"</div>
+        <div class="testi-author"><div class="testi-ava">RM</div><div><div class="testi-name">Rahul Mehta</div><div class="testi-role">Fitness Coach, Mumbai</div></div></div>
+        <div class="testi-verify">✓ Verified: Magnesium Glycinate</div>
+      </div>
+      <div class="testi-card" data-reveal>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"Fast delivery, authentic products. My go-to wellness store. Highly recommend Vandana Medical!"</div>
+        <div class="testi-author"><div class="testi-ava">AK</div><div><div class="testi-name">Anita Krishnamurthy</div><div class="testi-role">Nutritionist, Bangalore</div></div></div>
+        <div class="testi-verify">✓ Verified: Omega-3 Fish Oil</div>
+      </div>
+      <div class="testi-card" data-reveal>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"Impeccable product quality. Professional packaging speaks volumes about their standards."</div>
+        <div class="testi-author"><div class="testi-ava">VS</div><div><div class="testi-name">Dr. Vikram Singh</div><div class="testi-role">Diabetologist, Lucknow</div></div></div>
+        <div class="testi-verify">✓ Verified: BP Monitor</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brands -->
+<div class="brands-bar">
+  <div class="brands-label">Trusted Partner Brands</div>
+  <div class="brands-track">
+    <span class="brand-item">Himalaya</span>
+    <span class="brand-item">Abbott</span>
+    <span class="brand-item">Pfizer</span>
+    <span class="brand-item">Cipla</span>
+    <span class="brand-item">Sun Pharma</span>
+    <span class="brand-item">Dr. Reddy's</span>
+    <span class="brand-item">Mankind</span>
+    <span class="brand-item">Zydus</span>
+    <span class="brand-item">Himalaya</span>
+    <span class="brand-item">Abbott</span>
+    <span class="brand-item">Pfizer</span>
+    <span class="brand-item">Cipla</span>
+    <span class="brand-item">Sun Pharma</span>
+    <span class="brand-item">Dr. Reddy's</span>
+    <span class="brand-item">Mankind</span>
+    <span class="brand-item">Zydus</span>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-blob footer-blob-1"></div>
+  <div class="footer-blob footer-blob-2"></div>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:1.2rem;margin-bottom:1.6rem">
+          <div class="logo-mark">VM</div>
+          <div><div class="brand" style="font-family:var(--font-display);font-size:2rem;color:#fff;line-height:1">Vandana</div><div class="sub" style="font-size:.9rem;letter-spacing:.25em;color:rgba(201,168,76,.7);text-transform:uppercase">Medical</div></div>
+        </div>
+        <p style="font-size:1.3rem;color:rgba(255,255,255,.45);line-height:1.75;margin-bottom:2rem">Pharmaceutical-grade health products with AI-powered guidance. Your trusted wellness partner since 2012.</p>
+        <div style="display:flex;gap:1rem">
+          <a href="#" style="width:3.6rem;height:3.6rem;border-radius:1rem;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:rgba(255,255,255,.4);transition:all .2s">📷</a>
+          <a href="#" style="width:3.6rem;height:3.6rem;border-radius:1rem;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:rgba(255,255,255,.4);transition:all .2s">🐦</a>
+          <a href="#" style="width:3.6rem;height:3.6rem;border-radius:1rem;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:rgba(255,255,255,.4);transition:all .2s">📘</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">My Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="shop.html">Vitamins & Supplements</a></li>
+          <li><a href="shop.html">Minerals</a></li>
+          <li><a href="shop.html">Medical Devices</a></li>
+          <li><a href="shop.html">Wellness Products</a></li>
+          <li><a href="shop.html">Sports Nutrition</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><span class="footer-contact-ico">📍</span><span class="footer-contact-text">Main Market Oel , Near Sarkari Hospital,<br>Lakhimpur Kheri Oel, UP — 262701</span></div>
+        <div class="footer-contact-item"><span class="footer-contact-ico">📞</span><span class="footer-contact-text">+91 8299716762</span></div>
+        <div class="footer-contact-item"><span class="footer-contact-ico">✉️</span><span class="footer-contact-text">vandanamedicalagencya@gmail.com</span></div>
+        <div class="footer-nl-label" style="margin-top:1.6rem">Newsletter</div>
+        <div class="footer-nl-form">
+          <input class="footer-nl-input" type="email" placeholder="Your email">
+          <button class="footer-nl-btn">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 Vandana Medical. Owner: Anmol Agnihotri. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="about.html">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-head">
+    <h2>🛒 Cart <span class="cart-cnt cart-badge-count">0</span></h2>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cart-body">
+    <div class="cart-empty">
+      <div class="cart-empty-ico">🛒</div>
+      <h3>Your cart is empty</h3>
+      <p style="font-size:1.3rem;color:var(--text-3)">Add some health essentials!</p>
+      <a href="shop.html" class="btn-primary" onclick="closeCart()"><span>Shop Now</span></a>
+    </div>
+  </div>
+  <div class="cart-foot" id="cart-foot" style="display:none">
+    <div class="cart-coupon">
+      <input class="coupon-input" type="text" placeholder="🏷 Coupon code (FIRST10)">
+      <button class="coupon-btn">Apply</button>
+    </div>
+    <div class="cart-total-row"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+    <div class="cart-total-row cart-total-free"><span>Delivery</span><span>Free 🎉</span></div>
+    <div class="cart-total-row cart-total-grand" style="display:flex;justify-content:space-between"><span>Total</span><span id="cart-total">$0.00</span></div>
+    <button class="checkout-btn"><span>Proceed to Checkout →</span></button>
+    <button class="cart-clear-btn" onclick="clearCart()">Clear cart</button>
+  </div>
+</div>
+
+<script src="js/cart.js"></script>
+<script src="js/chatbot.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Vandana Medical</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ann-bar"><div class="ann-track"><span>✦ Vandana Medical · Lakhimpur Kheri, UP</span><span>👨‍⚕️ Owner: Anmol Agnihotri</span><span>⭐ Serving since 2012</span><span>💊 Pharmaceutical Grade Quality</span><span>✦ Vandana Medical · Lakhimpur Kheri, UP</span><span>👨‍⚕️ Owner: Anmol Agnihotri</span><span>⭐ Serving since 2012</span><span>💊 Pharmaceutical Grade Quality</span></div></div>
+
+<nav class="navbar" id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-mark">VM</div><div class="logo-text"><div class="brand">Vandana</div><div class="sub">Medical</div></div></a>
+    <div class="nav-links">
+      <a href="index.html"   class="nav-link">Home</a>
+      <a href="shop.html"    class="nav-link">Shop</a>
+      <a href="about.html"   class="nav-link active">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-icon" onclick="window.location='shop.html'">♡</button>
+      <button class="nav-icon" onclick="openCart()">🛒<span class="nav-badge cart-badge-count">0</span></button>
+      <a href="login.html" class="btn-primary desktop"><span>Sign In</span></a>
+      <button class="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+  <a href="index.html">Home</a><a href="shop.html">Shop</a>
+  <a href="about.html">About</a><a href="contact.html">Contact</a>
+</div>
+
+<!-- Hero -->
+<div class="about-hero">
+  <div class="hero-blob hero-blob-1" style="opacity:.5"></div>
+  <div class="section-eye" style="color:rgba(201,168,76,.8)">Our Story</div>
+  <h1>Health is not just <em>a business</em><br>— it's a mission</h1>
+  <p>Founded in Lakhimpur Kheri, UP, we started with a simple belief: everyone deserves access to pharmaceutical-grade wellness products and honest health guidance.</p>
+</div>
+
+<!-- Owner Card -->
+<section class="section" style="background:var(--cream-dark);padding-top:4rem">
+  <div class="section-inner">
+    <div class="owner-card">
+      <div class="hero-blob hero-blob-1" style="opacity:.3"></div>
+      <div class="owner-grid">
+        <div style="text-align:center">
+          <div class="owner-ava">AA</div>
+          <div class="owner-name">Anmol Agnihotri</div>
+          <div class="owner-title">Founder & Owner · Vandana Medical</div>
+          <div style="margin-top:2rem;display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap">
+            <div style="background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.25);border-radius:5rem;padding:.6rem 1.4rem;font-size:1.2rem;color:var(--gold-light)">📍 Lakhimpur Kheri, UP</div>
+            <div style="background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);border-radius:5rem;padding:.6rem 1.4rem;font-size:1.2rem;color:#86efac">✓ Since 2012</div>
+          </div>
+        </div>
+        <div>
+          <div class="section-eye" style="color:rgba(201,168,76,.8)">About the Owner</div>
+          <div class="section-title" style="color:#fff;margin-bottom:2rem">Committed to<br><em style="color:var(--gold-light)">Your Wellness</em></div>
+          <p class="owner-bio">Anmol Agnihotri founded Vandana Medical with a vision to bring pharmaceutical-grade health products to the people of Lakhimpur Kheri and across India. With deep roots in the community and a passion for preventive healthcare, Anmol has built a trusted brand that thousands of families rely on for their wellness needs.</p>
+          <p class="owner-bio" style="margin-top:1.6rem">Under his leadership, Vandana Medical has grown from a local pharmacy to a full-fledged health platform with AI-powered guidance, premium product curation, and reliable delivery across India.</p>
+          <div style="margin-top:3.2rem;display:grid;grid-template-columns:1fr 1fr;gap:1.6rem">
+            <div style="background:rgba(255,255,255,.06);border-radius:1.4rem;padding:1.6rem;text-align:center">
+              <div style="font-family:var(--font-display);font-size:3.2rem;font-weight:600;color:#fff">12+</div>
+              <div style="font-size:1.2rem;color:rgba(255,255,255,.5);margin-top:.4rem">Years of Service</div>
+            </div>
+            <div style="background:rgba(255,255,255,.06);border-radius:1.4rem;padding:1.6rem;text-align:center">
+              <div style="font-family:var(--font-display);font-size:3.2rem;font-weight:600;color:#fff">50K+</div>
+              <div style="font-size:1.2rem;color:rgba(255,255,255,.5);margin-top:.4rem">Happy Customers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Location Editor -->
+<section class="section location-section">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:4rem">
+      <div class="section-eye" style="color:rgba(201,168,76,.8)">Store Location</div>
+      <div class="section-title" style="color:#fff">Find & Edit <em style="color:var(--gold-light)">Our Location</em></div>
+    </div>
+    <div class="location-card">
+      <h2>Store Details</h2>
+      <p>Update your store information below. Changes are saved locally.</p>
+      <div class="location-form">
+        <div class="loc-field loc-full">
+          <label class="loc-label">Store Name</label>
+          <input class="loc-input" id="loc-store-name" type="text" placeholder="Vandana Medical Store">
+        </div>
+        <div class="loc-field loc-full">
+          <label class="loc-label">Street Address</label>
+          <input class="loc-input" id="loc-address" type="text" placeholder="Main Market, Near Civil Hospital">
+        </div>
+        <div class="loc-field">
+          <label class="loc-label">City</label>
+          <input class="loc-input" id="loc-city" type="text" placeholder="Lakhimpur Kheri">
+        </div>
+        <div class="loc-field">
+          <label class="loc-label">State</label>
+          <select class="loc-select" id="loc-state">
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+        </div>
+        <div class="loc-field">
+          <label class="loc-label">PIN Code</label>
+          <input class="loc-input" id="loc-pin" type="text" placeholder="262701">
+        </div>
+        <div class="loc-field">
+          <label class="loc-label">Phone</label>
+          <input class="loc-input" id="loc-phone" type="tel" placeholder="+91 98765 43210">
+        </div>
+        <div class="loc-field loc-full">
+          <button id="save-location-btn" class="btn-gold" onclick="saveLocation()" style="width:100%;padding:1.4rem;font-size:1.4rem">
+            📍 Save Location
+          </button>
+        </div>
+      </div>
+
+      <!-- Live display -->
+      <div class="loc-display" id="loc-display">
+        <div class="loc-pin">📍</div>
+        <div>
+          <div class="loc-address" id="loc-display-addr">Vandana Medical Store</div>
+          <div class="loc-sub" id="loc-display-sub">Main Market, Near Civil Hospital, Lakhimpur Kheri, UP - 262701</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="section" style="background:#fff">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:4rem">
+      <div class="section-eye">Our Values</div>
+      <div class="section-title">What We Stand For</div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card" data-reveal><div class="value-ico" style="background:rgba(20,83,45,.08)">🛡</div><div class="value-title">Authenticity First</div><div class="value-desc">Every product sourced directly from certified manufacturers and third-party tested for purity.</div></div>
+      <div class="value-card" data-reveal><div class="value-ico" style="background:rgba(59,130,246,.08)">🔬</div><div class="value-title">Science-Backed</div><div class="value-desc">Product selection guided by peer-reviewed research and our medical advisor team.</div></div>
+      <div class="value-card" data-reveal><div class="value-ico" style="background:rgba(239,68,68,.08)">❤️</div><div class="value-title">Patient-Centric</div><div class="value-desc">We measure success by the health outcomes of our customers, not just sales numbers.</div></div>
+      <div class="value-card" data-reveal><div class="value-ico" style="background:rgba(201,168,76,.1)">🏆</div><div class="value-title">Premium Quality</div><div class="value-desc">ISO certified storage with temperature-controlled facilities for all sensitive products.</div></div>
+      <div class="value-card" data-reveal><div class="value-ico" style="background:rgba(124,58,237,.08)">👨‍⚕️</div><div class="value-title">Expert Guidance</div><div class="value-desc">30+ in-house doctors and nutritionists powering our AI health advisor platform.</div></div>
+      <div class="value-card" data-reveal><div class="value-ico" style="background:rgba(20,83,45,.08)">🚚</div><div class="value-title">Fast Delivery</div><div class="value-desc">Pan-India delivery with same-day dispatch for orders placed before 2 PM.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="section" style="background:var(--cream-dark)">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:4rem">
+      <div class="section-eye">The People</div>
+      <div class="section-title">Meet Our Team</div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card" data-reveal><div class="team-ava">AA</div><div class="team-name">Anmol Agnihotri</div><div class="team-role">Founder & Owner</div><div class="team-bio">Lakhimpur Kheri entrepreneur with 12+ years in health retail and community wellness.</div></div>
+      <div class="team-card" data-reveal><div class="team-ava">VS</div><div class="team-name">Dr. Vandana Sharma</div><div class="team-role">Chief Medical Advisor</div><div class="team-bio">20+ years in pharmaceutical sciences and clinical nutrition guidance.</div></div>
+      <div class="team-card" data-reveal><div class="team-ava">PM</div><div class="team-name">Dr. Priya Mehta</div><div class="team-role">AI Health Lead</div><div class="team-bio">Nutrition & wellness specialist powering our MedBot AI system.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--navy);padding:3.2rem;text-align:center">
+  <p style="color:rgba(255,255,255,.4);font-size:1.2rem">© 2024 Vandana Medical · Owner: Anmol Agnihotri · Lakhimpur Kheri, UP</p>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-head"><h2>🛒 Cart <span class="cart-cnt cart-badge-count">0</span></h2><button class="cart-close" onclick="closeCart()">✕</button></div>
+  <div class="cart-body" id="cart-body"></div>
+  <div class="cart-foot" id="cart-foot" style="display:none">
+    <div class="cart-total-row cart-total-grand" style="display:flex;justify-content:space-between"><span>Total</span><span id="cart-total">$0.00</span></div>
+    <button class="checkout-btn"><span>Proceed to Checkout →</span></button>
+  </div>
+</div>
+
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — Vandana Medical</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background:var(--navy)">
+
+<div class="auth-page">
+  <!-- Floating glass squares -->
+  <div class="glass-square" style="width:10rem;height:10rem;top:-5rem;left:-6rem;--i:0;animation-delay:calc(-1s * 0)"></div>
+  <div class="glass-square" style="width:12rem;height:12rem;top:15rem;left:-10rem;--i:1;animation-delay:calc(-1s * 1)"></div>
+  <div class="glass-square" style="width:8rem;height:8rem;right:-5rem;bottom:-6rem;--i:2;animation-delay:calc(-1s * 2)"></div>
+  <div class="glass-square" style="width:5rem;height:5rem;left:10rem;bottom:-8rem;--i:3;animation-delay:calc(-1s * 3)"></div>
+  <div class="glass-square" style="width:6rem;height:6rem;top:-8rem;left:14rem;--i:4;animation-delay:calc(-1s * 4)"></div>
+
+  <div class="auth-card">
+    <div class="auth-logo">
+      <div class="logo-mark">VM</div>
+      <div class="logo-text">
+        <div class="brand" style="color:#fff">Vandana Medical</div>
+        <div class="sub">Health Platform</div>
+      </div>
+    </div>
+
+    <div class="auth-h">Welcome back</div>
+    <div class="auth-p">Sign in to access your dashboard and AI health advisor</div>
+
+    <div class="auth-error" id="auth-err">Invalid credentials. Please use the demo account below.</div>
+
+    <div class="field-grp">
+      <label class="field-lbl">Email Address</label>
+      <div class="field-wrap">
+        <span class="field-ico">✉️</span>
+        <input class="field-inp" type="email" id="auth-email" placeholder="you@example.com" value="demo@vandanamedical.com">
+      </div>
+    </div>
+
+    <div class="field-grp">
+      <label class="field-lbl">Password</label>
+      <div class="field-wrap">
+        <span class="field-ico">🔒</span>
+        <input class="field-inp" type="password" id="auth-pwd" placeholder="••••••••" value="demo123">
+      </div>
+    </div>
+
+    <button class="auth-submit" onclick="doSignIn()">Sign In →</button>
+
+    <div class="auth-divider">or</div>
+
+    <button class="demo-login-btn" onclick="demoLogin()">✦ Use Demo Account</button>
+
+    <div class="auth-info">
+      <div class="auth-info-title">🔑 Demo credentials</div>
+      <p>Email: <code>demo@vandanamedical.com</code></p>
+      <p>Password: <code>demo123</code></p>
+    </div>
+
+    <div class="auth-back">← <a href="index.html">Back to home</a></div>
+  </div>
+</div>
+
+<script>
+  function doSignIn() {
+    const email = document.getElementById('auth-email').value;
+    const pwd   = document.getElementById('auth-pwd').value;
+    const err   = document.getElementById('auth-err');
+    if (email === 'demo@vandanamedical.com' && pwd === 'demo123') {
+      err.classList.remove('show');
+      const user = { name: 'Demo User', email, avatar: 'DU' };
+      localStorage.setItem('vm_user', JSON.stringify(user));
+      window.location.href = 'index.html';
+    } else {
+      err.classList.add('show');
+    }
+  }
+  function demoLogin() {
+    document.getElementById('auth-email').value = 'demo@vandanamedical.com';
+    document.getElementById('auth-pwd').value   = 'demo123';
+    doSignIn();
+  }
+  document.getElementById('auth-pwd').addEventListener('keydown', e => {
+    if (e.key === 'Enter') doSignIn();
+  });
+</script>
+</body>
+</html>
